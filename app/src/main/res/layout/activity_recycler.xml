@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Recycler"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3240dd">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="TextView" />
+    </LinearLayout>
+    <!-- <EditText
+            android:id="@+id/edittext_insert"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="25dp"
+            android:inputType="number" />-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F2F3FD"
+        android:padding="4dp"
+        android:scrollbars="vertical" />
+
+    <Button
+        android:id="@+id/button_insert"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/custom_button"
+        android:text="+"
+        android:textColor="#2B60DE"
+        android:textSize="46sp" />
+
+
+    <!-- <EditText
+          android:id="@+id/edittext_remove"
+          android:layout_width="40dp"
+          android:layout_height="wrap_content"
+          android:layout_alignBottom="@id/button_insert"
+          android:layout_marginStart="65dp"
+          android:layout_marginLeft="65dp"
+          android:layout_toEndOf="@id/button_insert"
+          android:layout_toRightOf="@+id/button_insert"
+          android:inputType="number" />
+
+      <Button
+          android:id="@+id/button_remove"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBottom="@id/edittext_remove"
+          android:layout_toEndOf="@id/edittext_remove"
+          android:layout_toRightOf="@+id/edittext_remove"
+          android:text="remove" />-->
+
+</LinearLayout>

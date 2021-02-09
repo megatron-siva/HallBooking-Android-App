@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="placement_nauditorium">Placement\nAuditorium</string>
+    <string name="booking_availble">Booking Availble</string>
+    <string name="conference_hall_n_nec">CONFERENCE HALL \n NEC</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_logout">Logout</string>
+    <string name="menu_help">Help</string>
+    <string name="menu_about_us">About us</string>
+
+    <string name="menu_divider"> </string>
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+</resources>

@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F3FD"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:requiresFadingEdge="horizontal"
+        android:background="#3240dd"
+        >
+
+        <ImageButton
+            android:id="@+id/dater"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_cal"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:shadowColor="#000000"
+            android:shadowDx="-5"
+            android:shadowDy="5"
+            android:layout_marginLeft="20dp"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:paddingBottom="7dp"
+            android:paddingTop="7dp"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:elevation="15dp"
+            android:outlineAmbientShadowColor="#000000"
+            android:outlineSpotShadowColor="#000000"
+            />
+
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:hint="Pick up a date"
+            android:textStyle="bold"
+            android:textColorHint="#ffffff"
+            android:textSize="24sp"
+            />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/Scrollable1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="82dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/screen1"
+            android:visibility="invisible">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp">
+
+                <Button
+                    android:paddingTop="5dp"
+                    android:elevation="10dp"
+                    android:shadowColor="#000000"
+                    android:shadowDx="-10"
+                    android:shadowDy="10"
+                    android:id="@+id/nec_conference_hall"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/button_rounded"
+                    android:drawableTop="@drawable/icon"
+                    android:onClick="button1"
+                    android:text="@string/conference_hall_n_nec"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/nec_placement_auditorium"
+                    android:textColor="#000000"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints"
+                    android:outlineAmbientShadowColor="#000000"
+                    android:outlineSpotShadowColor="#000000"
+                    />
+
+                <TextView
+                    android:id="@+id/nec_conference_halltv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:text="@string/booking_availble"
+                    android:textColor="#008000"
+                    android:elevation="10dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/nec_conference_hall"
+                    app:layout_constraintEnd_toEndOf="@+id/nec_conference_hall"
+                    app:layout_constraintHorizontal_bias="0.51"
+                    app:layout_constraintStart_toStartOf="@+id/nec_conference_hall" />
+
+                <Button
+                    android:paddingTop="5dp"
+                    android:shadowColor="#000000"
+                    android:shadowDx="-10"
+                    android:shadowDy="10"
+                    android:id="@+id/nec_placement_auditorium"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/button_rounded"
+                    android:drawableTop="@drawable/icon"
+                    android:onClick="button2"
+                    android:text="PLACEMENT AUDITORIUM NEC"
+                    android:textColor="#000000"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toEndOf="@id/nec_conference_hall"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/nec_placement_auditoriumtv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:text="@string/booking_availble"
+                    android:textColor="#008000"
+                    android:elevation="10dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/nec_placement_auditorium"
+                    app:layout_constraintEnd_toEndOf="@+id/nec_placement_auditorium"
+                    app:layout_constraintStart_toStartOf="@+id/nec_placement_auditorium" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp">
+
+                <Button
+                    android:paddingTop="5dp"
+                    android:shadowColor="#000000"
+                    android:shadowDx="-10"
+                    android:shadowDy="10"
+                    android:id="@+id/npc_conference_hall"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/nasc_auditorium"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/button_rounded"
+                    android:drawableTop="@drawable/icon"
+                    android:onClick="button3"
+                    android:text=" Conference Hall \n NPC"
+                    android:textColor="#000"
+                    />
+
+                <TextView
+                    android:id="@+id/npc_conference_halltv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Booking Availble"
+                    android:textColor="#008000"
+                    android:elevation="10dp"
+                    android:layout_marginBottom="6dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/npc_conference_hall"
+                    app:layout_constraintEnd_toEndOf="@+id/npc_conference_hall"
+                    app:layout_constraintStart_toStartOf="@+id/npc_conference_hall" />
+
+                <Button
+                    android:paddingTop="5dp"
+                    android:shadowColor="#000000"
+                    android:shadowDx="-10"
+                    android:shadowDy="10"
+                    android:id="@+id/nasc_auditorium"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toEndOf="@id/npc_conference_hall"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/button_rounded"
+                    android:drawableTop="@drawable/icon"
+                    android:onClick="button4"
+                    android:text="Auditorium \n NASC"
+                    android:textColor="#000" />
+
+                <TextView
+                    android:id="@+id/nasc_auditoriumtv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:text="@string/booking_availble"
+                    android:textColor="#008000"
+                    android:elevation="10dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/nasc_auditorium"
+                    app:layout_constraintEnd_toEndOf="@+id/nasc_auditorium"
+                    app:layout_constraintStart_toStartOf="@+id/nasc_auditorium" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp">
+
+                <Button
+                    android:paddingTop="5dp"
+                    android:shadowColor="#000000"
+                    android:shadowDx="-10"
+                    android:shadowDy="10"
+                    android:id="@+id/nct_conference_hall"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/cbse_main_multi_purpose_hall"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/button_rounded"
+                    android:drawableTop="@drawable/icon"
+                    android:onClick="button5"
+                    android:text="Conference Hall \n NCT"
+                    android:textColor="#000"
+                    />
+
+                <TextView
+                    android:id="@+id/nct_conference_halltv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Booking Availble"
+                    android:textColor="#008000"
+                    android:elevation="10dp"
+                    android:layout_marginBottom="6dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/nct_conference_hall"
+                    app:layout_constraintEnd_toEndOf="@+id/nct_conference_hall"
+                    app:layout_constraintStart_toStartOf="@+id/nct_conference_hall" />
+
+                <Button
+                    android:paddingTop="5dp"
+                    android:shadowColor="#000000"
+                    android:shadowDx="-10"
+                    android:shadowDy="10"
+                    android:id="@+id/cbse_main_multi_purpose_hall"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toEndOf="@id/nct_conference_hall"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/button_rounded"
+                    android:drawableTop="@drawable/icon"
+                    android:onClick="button6"
+                    android:text="Multi Purpose Hall \n CBSE - Main"
+                    android:textColor="#000"
+
+                    />
+
+                <TextView
+                    android:id="@+id/cbse_main_multi_purpose_halltv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:text="@string/booking_availble"
+                    android:textColor="#008000"
+                    android:elevation="10dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/cbse_main_multi_purpose_hall"
+                    app:layout_constraintEnd_toEndOf="@+id/cbse_main_multi_purpose_hall"
+                    app:layout_constraintStart_toStartOf="@+id/cbse_main_multi_purpose_hall" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp">
+
+                <Button
+                    android:paddingTop="5dp"
+                    android:shadowColor="#000000"
+                    android:shadowDx="-10"
+                    android:shadowDy="10"
+                    android:id="@+id/cbse_city_campus_multi_purpose_hall"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/matric_seminar_hall"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/button_rounded"
+                    android:drawableTop="@drawable/icon"
+                    android:onClick="button7"
+                    android:text="Multi Purpose Hall \n CBSE - City Campus"
+                    android:textColor="#000"
+                    />
+
+                <TextView
+                    android:id="@+id/cbse_city_campus_multi_purpose_halltv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Booking Availble"
+                    android:textColor="#008000"
+                    android:elevation="10dp"
+                    android:layout_marginBottom="6dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/cbse_city_campus_multi_purpose_hall"
+                    app:layout_constraintEnd_toEndOf="@+id/cbse_city_campus_multi_purpose_hall"
+                    app:layout_constraintStart_toStartOf="@+id/cbse_city_campus_multi_purpose_hall" />
+
+                <Button
+                    android:paddingTop="5dp"
+                    android:shadowColor="#000000"
+                    android:shadowDx="-10"
+                    android:shadowDy="10"
+                    android:id="@+id/matric_seminar_hall"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toEndOf="@id/cbse_city_campus_multi_purpose_hall"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/button_rounded"
+                    android:drawableTop="@drawable/icon"
+                    android:onClick="button8"
+                    android:text="Seminar Hall \n Matric"
+                    android:textColor="#000"
+                    />
+
+                <TextView
+                    android:id="@+id/matric_seminar_halltv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:text="@string/booking_availble"
+                    android:textColor="#008000"
+                    android:elevation="10dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/matric_seminar_hall"
+                    app:layout_constraintEnd_toEndOf="@+id/matric_seminar_hall"
+                    app:layout_constraintStart_toStartOf="@+id/matric_seminar_hall" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp">
+
+                <Button
+                    android:paddingTop="5dp"
+                    android:shadowColor="#000000"
+                    android:shadowDx="-10"
+                    android:shadowDy="10"
+                    android:id="@+id/bed_multi_purpose_hall"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/phar_nur_phy_conference_hall"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/button_rounded"
+                    android:drawableTop="@drawable/icon"
+                    android:onClick="button9"
+                    android:text="Multi Purpose Hall  B.Ed"
+                    android:textColor="#000"
+                    />
+
+                <TextView
+                    android:id="@+id/bed_multi_purpose_halltv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Booking Availble"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#008000"
+                    android:elevation="10dp"
+                    app:layout_constraintStart_toStartOf="@id/bed_multi_purpose_hall"
+                    app:layout_constraintEnd_toEndOf="@id/bed_multi_purpose_hall"
+                    app:layout_constraintBottom_toBottomOf="@+id/bed_multi_purpose_hall" />
+
+                <Button
+                    android:paddingTop="5dp"
+                    android:shadowColor="#000000"
+                    android:shadowDx="-10"
+                    android:shadowDy="10"
+                    android:id="@+id/phar_nur_phy_conference_hall"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:paddingBottom="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toEndOf="@id/bed_multi_purpose_hall"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/button_rounded"
+                    android:drawableTop="@drawable/icon"
+                    android:onClick="button10"
+                    android:text="Conference Hall Pharmacy,Nursing,\nPhysiotherapy"
+                    android:textColor="#000"
+                    />
+
+                <TextView
+                    android:id="@+id/phar_nur_phy_conference_halltv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:text="@string/booking_availble"
+                    android:textColor="#008000"
+                    android:elevation="10dp"
+                    app:layout_constraintBottom_toBottomOf="@id/phar_nur_phy_conference_hall"
+                    app:layout_constraintEnd_toEndOf="@id/phar_nur_phy_conference_hall"
+                    app:layout_constraintStart_toStartOf="@id/phar_nur_phy_conference_hall" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>
